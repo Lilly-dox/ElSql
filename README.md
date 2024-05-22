@@ -31,7 +31,8 @@ with open(normpath(filename), "rb") as file:
 	return redirect("/?file=index.html")
 ```
  Kiểm tra xem file đó có tồn tại hay không. Nếu tồn tạo thì sẽ open file
- -> Kiểm tra tên file với regex ```r'^(([ -~])+.)+([(^~\'!*<>:;,?"*|%)]+)|([^\x00-\x7F]+```  ```timeout=2```:
+ -> Kiểm tra tên file với regex ```r'^(([ -~])+.)+([(^~\'!*<>:;,?"*|%)]+)|([^\x00-\x7F]+```  
+ ```timeout=2```:
 timeout là tham số giới hạn thời gian cho phép việc tìm kiếm diễn ra. Nếu việc tìm kiếm mất nhiều thời gian hơn giá trị timeout (trong trường hợp này là 2 giây), nó sẽ dừng lại và gây ra một ngoại lệ re.error.
 
 Trang web dính lỗi path travesal
